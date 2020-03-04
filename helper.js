@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 // function to return a new Pokemon object
 function Pokemon(id, name, type, attack, defense, description) {
   return {
