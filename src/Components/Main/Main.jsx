@@ -142,7 +142,15 @@ class Main extends Component {
   }
   // update data acc to page no
   updateData = page => {
-    this.setState({ loading: true });
+    this.setState({
+      loading: true,
+      itemsperpage: 0,
+      totalItems: 0,
+      data: [],
+      filtereddata: [],
+      query: "",
+      modalData: null
+    });
     getData(page, this.props.cache).then(res => {
       if (res) {
         let { page_size, total_items, data } = res;
