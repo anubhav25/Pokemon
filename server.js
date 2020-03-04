@@ -103,7 +103,9 @@ app.patch("/pokemon/:id", async (req, res) => {
       await WriteData(data);
       return res.json({ result: true });
     }
-  } catch {}
+  } catch (e) {
+    console.log(e);
+  }
   return res.json({ result: false });
 });
 
@@ -114,7 +116,9 @@ app.delete("/pokemon/:id", async (req, res) => {
     data = data.filter(x => x.id !== id);
     await WriteData(data);
     return res.json({ result: true });
-  } catch {}
+  } catch (e) {
+    console.log(e);
+  }
   return res.json({ result: false });
 });
 
