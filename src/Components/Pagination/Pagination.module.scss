@@ -1,0 +1,34 @@
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  .active {
+    color: blue;
+    border: 1px solid blue;
+  }
+  .disabled {
+    color: #dedede;
+    border: 1px solid #dedede;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  li {
+    margin: 0.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 1rem;
+    border: 1px solid black;
+    padding: 0.3rem;
+    text-align: center;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:first-child {
+      margin-left: auto;
+    }
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+}

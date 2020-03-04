@@ -1,0 +1,80 @@
+.flex {
+  display: flex;
+}
+.name {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: auto;
+}
+.icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 1rem;
+}
+.power {
+  margin: auto;
+}
+.table {
+  margin: auto;
+  min-width: 50%;
+  tbody:before {
+    line-height: 0.5em;
+    content: "\200C";
+    display: block;
+  }
+  .round {
+    margin: 0.5rem auto;
+    border-radius: 100%;
+    box-shadow: 0 0 2px 1px black;
+    height: 64px;
+    width: 64px;
+  }
+  td,
+  th {
+    padding: 0.3rem 1rem;
+    border: 1px solid rgba(3, 3, 3, 0.2);
+  }
+  thead {
+    tr {
+      background-color: #ccc;
+    }
+  }
+  tbody {
+    tr:nth-child(even) {
+      background-color: #ccc;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .table {
+    .round {
+      margin: 0.5rem auto;
+      border-radius: 100%;
+      box-shadow: 0 0 2px 1px black;
+      height: 10rem;
+      width: 10rem;
+    }
+    thead {
+      display: none;
+    }
+    tr {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+      border: 1px solid rgba(3, 3, 3, 0.2);
+      margin: 2rem auto;
+    }
+
+    td {
+      flex: 1 1 100%;
+      margin: 0.3rem 0;
+      border: none;
+      display: flex;
+      * {
+        margin: auto;
+      }
+    }
+  }
+}
